@@ -1,0 +1,105 @@
+/*
+estilos para los párrafos
+*/
+
+#unico {
+    color: pink;
+    animation: latido 1s linear infinite;
+    /* eje x - eje y - blur - gutter */
+}
+
+p {
+    transition: 3s background-color linear;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 300;
+    /* border-radius: 10px 20px 30px 40px; */
+}
+
+/* cuando al elemento */
+/* le has dado click y lo mantienes */
+p:active {
+    background-color: blue;
+}
+
+/* cuando pasamos el mouse encimo */
+/* del elemento */
+p:hover {
+    box-shadow: 0px 10px 20px 10px rgb(207, 207, 207);
+}
+
+/* @keyframes latido {
+    0% {
+        transform: scale(.8);
+    }
+
+    25% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+} */
+
+#flex {
+    /* para colocar los elementos de izq a drch */
+    display: flex;
+    /* permite que los elementos vayan  */
+    /* hacia abajo cuando ya no cabe en pantalla */
+    flex-wrap: wrap;
+    /* para quitar las viñetas o numeros de la lista */
+    list-style-type: none;
+    /* espacio interno entre los elementos */
+    gap: 200px;
+
+    div {
+        min-width: 300px;
+        height: 200px;
+        background-color: red;
+    }
+}
+
+#especial {
+    background-color: rebeccapurple;
+    height: 300px;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 10px;
+
+    div {
+        background-color: red;
+        ;
+        width: 100px;
+        height: 100px;
+        font-size: 30px;
+        text-align: center;
+    }
+}
+
+#independiente {
+    align-self: center;
+}
+
+#grilla {
+    height: 500px;
+    background-color: crimson;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(2, auto);
+
+    #grilla-hijo {
+        background-color: rgb(83, 0, 17);
+        color: white;
+        height: 100%;
+        width: 100%;
+        grid-column: 2/4;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+
+        >div {
+            background-color: skyblue;
+            width: 300px;
+        }
+    }
+}
