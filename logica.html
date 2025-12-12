@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        // alert() sirve para generar una alerta en tu navegador, puedes
+        // colocar tanto texto como números
+        // alert(3 + 3)
+
+        // variable:
+        // es una especia de caja que puede almacenar cualquier cosa (dentro de js)
+        // textos, numeros o boleanos
+
+        // guardamos el valor escrito en "prompt" dentro de nuestra
+        // variable (caja) llamado "numero"
+        // let numero = prompt('Coloca un número y te diré si es par o impar')
+
+        // if (numero % 2 == 0) {
+        //     alert('Es par')
+        // } else {
+        //     alert('Es impar')
+        // }
+
+        // un texto, se representa por comillas dobles "" o comillas simples ''
+
+        // Ejercicio ...
+        // ....
+
+        // arreglo
+        let frutas = ['manzana', 'pera', 'fresa', 'naranja']
+        console.log(frutas)
+
+        // para acceder a algún valor dentro de nuestra caja
+        // usamos el nombre de la caja - frutas[]
+        console.log(frutas[3]) // NARANJA
+        // dentro del conrchete, colocas el número que representa esa fruta
+        // !!! EL PRIMER ELEMENTO INICIA CON EL NÚMEOR 0
+
+        // Si se te pide la cantidad de elementos que tiene
+        // tu arreglo, usamos arrelo.length
+        console.log(frutas.length)
+
+        // Quiero agregar una nueva fruta al final
+        // -- forma 1
+        frutas.push('piña') // tengo 5 frutas
+        // -- forma 2
+        frutas[frutas.length] = 'mango'
+
+        // Quiero eliminar la última fruta
+        frutas.pop()
+
+        // Quiero agregar una fruta al inicio
+        frutas.unshift('mango')
+        console.log(frutas)
+
+        // Quiero eleiminar la primera fruta
+        frutas.shift()
+        console.log(frutas)
+
+        // ----
+        const persona = {
+            nombre: 'Pepe',
+            edad: 29,
+            genero: 'masculino',
+            hobbies: ['gym', 'escuchar música', 'tejer'],
+            hijo: {
+                nombre: 'Luis',
+                edad: 19,
+            }
+        }
+
+        console.log(persona)
+
+        // Realice un algoritmo para leer las calificaciones de N alumnos 
+        // y determine el número de aprobados y reprobados.
+
+        const notaAprobatoria = 13
+
+        const calificaciones = [10, 11, 15, 13, 20, 19, 18, 14, 12, 20, 20]
+
+        let aprobados = 0
+        let reprobados = 0
+
+        calificaciones.forEach((nota) => {
+            if (nota >= notaAprobatoria) {
+                aprobados++
+            } else {
+                reprobados = reprobados + 1
+            }
+        })
+
+        console.log(aprobados)
+        console.log(reprobados)
+    </script>
+</body>
+
+</html>
